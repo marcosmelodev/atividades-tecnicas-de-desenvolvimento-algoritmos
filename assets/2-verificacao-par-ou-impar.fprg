@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="1-verificacao-par-ou-impar"/>
+        <attribute name="authors" value="Marcos"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-06 09:39:29 "/>
+        <attribute name="created" value="TWFyY29zO0RFU0tUT1AtMjY1VVIwRTsyMDI1LTA5LTA2OyIwOTozNDowOCAiOzI4NDA="/>
+        <attribute name="edited" value="TWFyY29zO0RFU0tUT1AtMjY1VVIwRTsyMDI1LTA5LTA2OyIwOTozOToyOSAiOzI7Mjk1Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite um n&#250;mero: &quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num % 2 = 0">
+                <then>
+                    <output expression="&quot;O n&#250;mero &#233; par. N&#250;mero: &quot;&amp;num" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;O n&#250;mero &#233; &#237;mpar. N&#250;mero: &quot;&amp;num" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
