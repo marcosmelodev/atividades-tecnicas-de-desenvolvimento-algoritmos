@@ -11,7 +11,7 @@
 
 ## 🎯 Objetivo
 
-Repositório destinado às atividades práticas da disciplina **Técnicas de Desenvolvimento de Algoritmos**, ministrada pela professora **Kadidja Valeria** na **Universidade do Distrito Federal (UDF)**.  
+Repositório destinado às atividades práticas da disciplina **Técnicas de Desenvolvimento de Algoritmos**, ministrada pela professora **Kadidja Valeria** na **Centro Universitário UDF**.  
 
 Este repositório documenta os **exercícios realizados em sala de aula**, com foco na **compreensão lógica e aplicação prática da linguagem Python**.
 
@@ -83,7 +83,7 @@ A pessoa João é a mais velha.
 📊 Saída esperada: o programa identifica corretamente o nome da pessoa mais velha entre as informadas.
 
 📘 Instituição
-🎓 Universidade do Distrito Federal (UDF)
+🎓 Centro Universitário UDF
 📚 Disciplina: Técnicas de Desenvolvimento de Algoritmos
 👩‍🏫 Professora: Kadidja Valeria
 
