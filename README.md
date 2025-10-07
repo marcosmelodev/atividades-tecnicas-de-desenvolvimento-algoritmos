@@ -4,14 +4,14 @@
   <img src="https://img.shields.io/badge/Linguagem-Python%203.10+-blue?logo=python&logoColor=white" alt="Python Badge">
   <img src="https://img.shields.io/badge/Disciplina-Técnicas%20de%20Desenvolvimento%20de%20Algoritmos-orange" alt="Disciplina Badge">
   <img src="https://img.shields.io/badge/Instituição-UDF-green" alt="UDF Badge">
-  <img src="https://img.shields.io/badge/Professor(a)-Kadidja%20Valeri-purple" alt="Professora Badge">
+  <img src="https://img.shields.io/badge/Professor(a)-Kadidja%20Valeria-purple" alt="Professora Badge">
 </p>
 
 ---
 
 ## 🎯 Objetivo
 
-Repositório destinado às atividades práticas da disciplina **Técnicas de Desenvolvimento de Algoritmos**, ministrada pela professora **Kadidja Valeri** na **Universidade do Distrito Federal (UDF)**.  
+Repositório destinado às atividades práticas da disciplina **Técnicas de Desenvolvimento de Algoritmos**, ministrada pela professora **Kadidja Valeria** na **Universidade do Distrito Federal (UDF)**.  
 
 Este repositório documenta os **exercícios realizados em sala de aula**, com foco na **compreensão lógica e aplicação prática da linguagem Python**.
 
@@ -85,7 +85,7 @@ A pessoa João é a mais velha.
 📘 Instituição
 🎓 Universidade do Distrito Federal (UDF)
 📚 Disciplina: Técnicas de Desenvolvimento de Algoritmos
-👩‍🏫 Professora: Kadidja Valeri
+👩‍🏫 Professora: Kadidja Valeria
 
 👨‍💻 Autor
 Marcos Melo
