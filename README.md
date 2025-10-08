@@ -92,4 +92,4 @@ Marcos Melo
 📍 Desenvolvedor e estudante de Análise e Desenvolvimento de Sistemas
 🔗 GitHub - marcosmelodev
 
-<p align="center"> <img src="https://img.shields.io/badge/Feito%20com-%E2%9D%A4%20e%20Python-blue?logo=python&logoColor=white" alt="Feito com amor e Python"> </p> <p align="center"> <i>“Programar é transformar lógica em resultado.”</i> </p> ```
+<p align="center"> <img src="https://img.shields.io/badge/Feito%20com-%E2%9D%A4%20e%20Python-blue?logo=python&logoColor=white" alt="Feito com amor e Python"> </p> <p align="center"> <i>“Programar é transformar lógica em resultado.”</i> </p> 
