@@ -1,0 +1,118 @@
+from produto import Produto
+
+while True:
+    print("""
+        ***MENU***
+        1. Listar Produtos
+        2. Adicionar ao carrinho
+        3. Remover do carrinho
+        4. Ver carrinho
+        5. Sair
+    """)
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        Produto.listar_produtos()
+    elif opcao == "2":
+        nome = input("Informe o nome do produto: ")
+        quantidade = int(input("Informe a quantidade: "))
+        Produto.adicionar_carrinho(nome, quantidade)
+    elif opcao == "3":
+        nome = input("Informe o nome do produto: ")
+        Produto.remover_carrinho(nome)
+    elif opcao == "4":
+        Produto.ver_carrinho()
+    elif opcao == "5":
+        print("Saindo!")
+        break
+    else:
+        print("Opção Inválida.")
+
+class Produto:
+
+    produtos = [
+            {"nome": "Celular", "preco": 1500, "estoque": 10},
+            {"nome": "SmartTV", "preco": 5000, "estoque": 6},
+            {"nome": "Tablet", "preco": 800, "estoque": 20}
+    ]
+     
+    carrinho = []
+
+    @classmethod
+    def listar_produtos(cls):
+        print("\n Produtos Disponíveis")
+        for i, p in enumerate(cls.produtos, start=1):
+            print(f"{i}. {p["nome"]} | R${p["preco"]} | (Estoque: {p["estoque"]})")
+
+    # @classmethod
+    # def adicionar_carrinho(cls, nome_produto, quantidade):
+    #     for p in cls.produtos:
+    #             if p['nome'].lower() == nome_produto.lower():
+    #                 if p['estoque'] >= quantidade:
+    #                     cls.carrinho.append({"nome": p["nome"], "preco":p["preco"], "quantidade": quantidade})
+    #             else:
+    #                 print(f"Estoque insuficiente. Estoque: {p["estoque"]}")
+    #             return
+    #     print(f"Produto {nome_produto} não encontrado")
+
+   
+    # produto.py, dentro da class Produto:
+    @classmethod
+    def adicionar_carrinho(cls, nome_produto, quantidade):
+        
+        # 1. Itera sobre todos os produtos no estoque
+        for p in cls.produtos:
+            
+            # 2. SE ENCONTROU O PRODUTO CORRETO
+            if p["nome"].lower() == nome_produto.lower():
+                
+                # 3. Verifica se tem estoque
+                if p["estoque"] >= quantidade:
+                    
+                    # SUCESSO: Atualiza o estoque e adiciona ao carrinho
+                    p["estoque"] -= quantidade
+                    
+                    cls.carrinho.append({
+                        "nome": p["nome"], 
+                        "preco": p["preco"], 
+                        "quantidade": quantidade
+                    })
+                    print(f"Adicionado {quantidade}x {p['nome']} ao carrinho. Estoque restante: {p['estoque']}")
+                    
+                else:
+                    # ERRO: Informa a falta de estoque
+                    print(f"Estoque insuficiente para {p['nome']}. Disponível: {p['estoque']}")
+                
+                # 4. **A CHAVE É ESTA LINHA:**
+                # O loop DEVE PARAR, pois já encontramos o item que procurávamos.
+                return # <--- Substituir 'break' por 'return' é ainda mais limpo neste caso
+                
+        # Se o loop terminar sem encontrar o produto (sem executar o 'return')
+        print(f"Produto '{nome_produto}' não encontrado no estoque.")
+            
+        
+    @classmethod
+    def remover_carrinho(cls, nome_produto):
+        for item in cls.carrinho:
+            if item["nome"].lower() == nome_produto.lower():
+                cls.carrinho.remove(item)
+
+                for p in cls.produtos:
+                    if p["nome"].lower() == nome_produto.lower():
+                        p["estoque"] += item["quantidade"]
+                print(f"{nome_produto} removido do carrinho")
+
+
+    @classmethod
+    def ver_carrinho(cls):
+        print("******Carrinho******")
+        if not cls.carrinho:
+            print("Carrinho vazio")
+            return
+        total = 0
+        for item in cls.carrinho:
+            subtotal = item["preco"] * item["quantidade"]
+            print(f"{item["quantidade"]} x {item["nome"]} | R${subtotal}")
+            total += subtotal
+        print(f"Total: R${total}")
